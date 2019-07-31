@@ -30,8 +30,10 @@ def signup():
     return home()
 
 
-@app.route('/logged-in')
+@app.route('/logged-in', methods=(['GET','POST']))
 def logged_in():
+    if request.method == 'POST':
+           update_food('food')
     return render_template('logged.html')
 
 

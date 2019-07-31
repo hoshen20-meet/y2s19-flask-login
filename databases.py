@@ -21,5 +21,5 @@ def get_user(username):
 
 
 def update_food(food):
-    session.query(user).filter(user.fav_food == fav_food).update({'food': food})
+    session.query(User).filter(User.fav_food == fav_food).update({'food': food})
     session.commit()
